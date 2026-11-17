@@ -1,0 +1,145 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma gratuita para aprender os fundamentos de HTML, CSS e JavaScript.">
+  <title>Programar Fácil | Aprenda programação</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-mark">&lt;/&gt;</span><span>Programar<span class="brand-light">Fácil</span></span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav id="main-nav">
+      <a href="#inicio">Início</a><a href="#curso">Aulas</a><a href="#atividades">Atividades</a>
+      <a href="#laboratorio">Laboratório</a><a href="#quiz">Questionário</a>
+    </nav>
+    <a class="top-cta" href="#curso">Começar a aprender <span>→</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> APRENDIZADO GRATUITO • DO ZERO</span>
+        <h1>Seu primeiro passo<br>no mundo da <em>programação.</em></h1>
+        <p>Aprenda a criar páginas e experiências para a internet. Estude no seu ritmo, pratique com exemplos e acompanhe sua evolução.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#curso">Explorar as aulas <span>→</span></a>
+          <a class="btn btn-quiet" href="#como-funciona">Como funciona</a>
+        </div>
+        <div class="hero-note"><span class="check-circle">✓</span> Não precisa ter experiência anterior.</div>
+      </div>
+      <div class="hero-art" aria-label="Ilustração de código">
+        <div class="floating-tag tag-html">HTML</div><div class="floating-tag tag-css">CSS</div>
+        <div class="code-window">
+          <div class="window-bar"><i></i><i></i><i></i><span>meu-primeiro-site.html</span></div>
+          <div class="code-lines">
+            <p><b>01</b> <span class="purple">&lt;html&gt;</span></p>
+            <p><b>02</b> &nbsp; <span class="purple">&lt;body&gt;</span></p>
+            <p><b>03</b> &nbsp;&nbsp; <span class="blue">&lt;h1&gt;</span></p>
+            <p><b>04</b> &nbsp;&nbsp;&nbsp; <span class="yellow">Olá, mundo!</span></p>
+            <p><b>05</b> &nbsp;&nbsp; <span class="blue">&lt;/h1&gt;</span></p>
+            <p><b>06</b> &nbsp; <span class="purple">&lt;/body&gt;</span></p>
+            <p><b>07</b> <span class="purple">&lt;/html&gt;</span></p>
+          </div>
+          <div class="window-status"><span>●</span> Seu aprendizado começa aqui</div>
+        </div>
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      </div>
+    </section>
+
+    <section class="stats section-wrap" id="como-funciona">
+      <div><strong>15</strong><span>aulas guiadas</span></div>
+      <div><strong>3</strong><span>módulos essenciais</span></div>
+      <div><strong>6</strong><span>projetos e desafios</span></div>
+      <div><strong>100%</strong><span>no seu ritmo</span></div>
+    </section>
+
+    <section class="section-wrap intro-section">
+      <div class="section-heading">
+        <span class="eyebrow">COMECE PELO COMEÇO</span>
+        <h2>Como você vai aprender</h2>
+        <p>Uma jornada organizada em pequenas etapas. Primeiro entenda, depois observe e, por fim, pratique.</p>
+      </div>
+      <div class="method-grid">
+        <article class="method-card"><span class="method-number">01</span><div class="method-icon violet">▤</div><h3>Estude</h3><p>Leia explicações claras sobre os conceitos e conheça a função de cada recurso.</p></article>
+        <article class="method-card"><span class="method-number">02</span><div class="method-icon blue">⌘</div><h3>Observe</h3><p>Analise exemplos de código e entenda como cada parte funciona.</p></article>
+        <article class="method-card"><span class="method-number">03</span><div class="method-icon green">✓</div><h3>Pratique</h3><p>Resolva atividades, teste ideias e acompanhe seu progresso.</p></article>
+      </div>
+    </section>
+
+    <section class="course-section" id="curso">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <span class="eyebrow">TRILHA DE APRENDIZADO</span>
+          <h2>Conteúdo para construir sua base</h2>
+          <p>São três módulos em sequência: estrutura, aparência e comportamento de páginas web.</p>
+        </div>
+        <div class="progress-panel">
+          <div class="progress-info"><div><strong>Seu progresso</strong><span id="progress-label">0 de 15 aulas concluídas</span></div><strong class="progress-percent" id="progress-percent">0%</strong></div>
+          <div class="progress-track"><div id="progress-bar"></div></div>
+          <p>O progresso fica salvo neste navegador.</p>
+        </div>
+        <div id="lesson-modules" class="lesson-modules"></div>
+      </div>
+    </section>
+
+    <section class="section-wrap activities-section" id="atividades">
+      <div class="section-heading">
+        <span class="eyebrow">APRENDER FAZENDO</span>
+        <h2>Desafios para colocar em prática</h2>
+        <p>Use o que estudou para criar pequenos projetos. Não tenha medo de testar e corrigir.</p>
+      </div>
+      <div id="challenge-grid" class="challenge-grid"></div>
+    </section>
+
+    <section class="lab-section" id="laboratorio">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <span class="eyebrow">EXPERIMENTE</span>
+          <h2>Laboratório de código</h2>
+          <p>Edite o exemplo, execute e veja o resultado. O laboratório funciona localmente no navegador.</p>
+        </div>
+        <div class="lab">
+          <div class="lab-editor">
+            <div class="lab-tabs"><span class="active">HTML</span><span>EXEMPLO EDITÁVEL</span></div>
+            <label for="code-editor">Seu código HTML</label>
+            <textarea id="code-editor" spellcheck="false"><h1>Olá, mundo!</h1>
+<p>Estou aprendendo a criar páginas com HTML.</p>
+<button onclick="document.querySelector('p').textContent = 'Você clicou no botão!'">Clique aqui</button></textarea>
+            <div class="lab-actions"><button class="btn btn-primary" id="run-code">▶ Executar código</button><button class="btn btn-quiet" id="reset-code">Restaurar exemplo</button></div>
+            <p class="lab-hint">Dica: experimente alterar o texto do título e executar novamente.</p>
+          </div>
+          <div class="lab-preview"><div class="preview-head"><span></span><span>PRÉ-VISUALIZAÇÃO</span><span>● AO VIVO</span></div><iframe id="preview-frame" title="Pré-visualização do código" sandbox="allow-scripts"></iframe></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap quiz-section" id="quiz">
+      <div class="section-heading">
+        <span class="eyebrow">REVISE O QUE APRENDEU</span>
+        <h2>Questionário de conhecimentos</h2>
+        <p>Responda às perguntas e confira seu resultado. Você pode tentar novamente.</p>
+      </div>
+      <div class="quiz-card">
+        <div class="quiz-top"><span>10 PERGUNTAS</span><span id="quiz-count">Questão 1 de 10</span></div>
+        <div class="quiz-track"><div id="quiz-progress"></div></div>
+        <div id="quiz-content"></div>
+        <div class="quiz-footer"><span id="quiz-feedback">Escolha uma alternativa para continuar.</span><button class="btn btn-primary" id="next-question" disabled>Próxima pergunta →</button></div>
+      </div>
+    </section>
+
+    <section class="section-wrap final-project">
+      <div><span class="eyebrow">ETAPA FINAL</span><h2>Agora é sua vez de criar.</h2><p>Reúna HTML, CSS e JavaScript em um projeto próprio. Pode ser um portfólio, uma página educativa, uma biblioteca ou uma loja fictícia.</p><a class="btn btn-light" href="#atividades">Ver projeto final <span>→</span></a></div>
+      <div class="project-symbol">&lt;/&gt;</div>
+    </section>
+  </main>
+
+  <footer><div class="section-wrap footer-inner"><a class="brand" href="#inicio"><span class="brand-mark">&lt;/&gt;</span><span>Programar<span class="brand-light">Fácil</span></span></a><p>Um projeto educativo para dar os primeiros passos na programação.</p><span>© 2026 Programar Fácil</span></div></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
